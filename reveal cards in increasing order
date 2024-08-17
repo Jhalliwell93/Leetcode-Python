@@ -4,7 +4,7 @@ def countPoints(deck):
     # Rearrange the deck highest to lowest value
     deck = sorted(deck, reverse=True)
 
-    # Repreat this process until there are no more cards in the deck
+    # Repeat this process until there are no more cards in the deck
     while deck:
         if len(newarray) > 1:
             # If array length is greater then one, place the final element of the array at the start
