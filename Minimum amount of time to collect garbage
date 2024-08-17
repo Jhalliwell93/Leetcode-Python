@@ -1,0 +1,28 @@
+class Solution:
+    def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
+        # Initilise answer
+        total = 0
+        # Get the length of the garbage Locations
+        N = len(garbage)
+
+        # Iterate between each of the different kinds of garbage
+        for c in "MPG":
+            # Current is the quanity of rubbish that will be collected plus the time taken to travel
+            current = 0
+            # Count the types of garbage in garbage[0]
+            current += garbage[0].count(c)
+            # Mx is the max value of the current, update here in case this value does not update in the loop below
+            mx = current
+
+
+            for i in range(1, N):
+                # Count how much travel time is needed
+                current += travel[i - 1]
+                if c in garbage[i]:
+                    # Count how many items of rubbish are collected
+                    current += garbage[i].count(c)
+                    # Update max value with time taken and quanity of rusbbish collected
+                    mx = current
+            # Add the max value to the answer
+            total += mx
+        return total
