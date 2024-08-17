@@ -1,4 +1,8 @@
 # This code is to provide a solution for the Leetcode Algorithym Challenge "https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/description/"
+# The aim of this code is to take a 3d matrix with ones and zeros, and return a matrix made of the differences between the ones and zeros in the rows and columns. 
+# The code achieves this by creating vectors for the rows and colums containing the sum of the 1's minus the 0's.
+# Is then uses these vectors to create a 3d matrix containing the sum of the vectors.
+
 
 class Solution:
     def onesMinusZeros(self, matrix: List[List[int]]) -> List[List[int]]:
