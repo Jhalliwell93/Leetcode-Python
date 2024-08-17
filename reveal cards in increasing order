@@ -1,0 +1,18 @@
+def countPoints(deck):
+    # Create a new array to store the answer
+    newarray = []
+    # Rearrange the deck highest to lowest value
+    deck = sorted(deck, reverse=True)
+
+    # Repreat this process until there are no more cards in the deck
+    while deck:
+        if len(newarray) > 1:
+            # If array length is greater then one, place the final element of the array at the start
+            newarray = [newarray[-1]] + newarray[:-1]
+        # Insert the highest value of the deck at the start of the new array
+        newarray.insert(0,deck[0])
+        # Remove that value from the deck
+        deck.pop(0)
+        
+
+    return newarray
