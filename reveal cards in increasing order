@@ -1,6 +1,11 @@
 # This code is a solution to the Leetcode Algorithym Challenge "https://leetcode.com/problems/reveal-cards-in-increasing-order/"
 # The aim of the challenge is to write a piece of code that will sort an deck of cards into an order were the lowest value card will be first, then the card behind it is shuffled to the back. 
 # This process is repeated until there are no more cards.
+# The code works by rearranging the deck of cards from highest to lowest. It creates an newarray for the answer.
+# First it takes the highest value card which becomes the first element of the newarray.
+# It then takes the next card from the deck and adds it to the top of the newarray.
+# Before taking new cards from the deck, the last card of the newarray is moved to the front of the newarray. A card from the deck will then be placed on top of this card.
+# The last process is repeated until there are no more cards in the deck.
 
 
 class Solution:
