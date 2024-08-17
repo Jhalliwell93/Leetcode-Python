@@ -1,3 +1,5 @@
+# This code is to provide a soltuion for the Leetcode Algorithym challenge https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
+
 class Solution:
     def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
         # Initilise answer
