@@ -1,0 +1,21 @@
+class Solution:
+    def onesMinusZeros(self, matrix: List[List[int]]) -> List[List[int]]:
+        # Create vectors for the differences between the columns and rows
+        n, m = len(matrix), len(matrix[0])
+
+        row_diff = [0] * n
+        col_diff = [0] * m
+
+        # Calculate values for vectors
+        for i in range(n):
+            for j in range(m):
+                if matrix[i][j] == 1:
+                    row_diff[i] += 1
+                    col_diff[j] += 1
+                else:
+                    row_diff[i] -= 1
+                    col_diff[j] -= 1
+
+        # Calculate the final matrix
+        ans = [[row_diff[i] + col_diff[j] for j in range(m)] for i in range(n)]
+        return ans
