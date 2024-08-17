@@ -1,4 +1,7 @@
 # This code is to provide a soltuion for the Leetcode Algorithym challenge https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
+# This code is to recieve two arrays. One contains strings resembling houses with garbage to be picked up. The second array is the travel time for a garbage truck to move from house to house.
+# The goal is to calculate how long it will take 3 garbage trucks (Metal,Plastic,Glass) to travel to each house and pick up the plastic.
+# The algorithym works by totalling how much garbage will need to be picked up by each truck, and how much travel time the trucks will need to go from house to house. 
 
 class Solution:
     def garbageCollection(self, garbage: List[str], travel: List[int]) -> int:
