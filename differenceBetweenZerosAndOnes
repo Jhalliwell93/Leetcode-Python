@@ -9,14 +9,14 @@ class Solution:
         # Create vectors for the differences between the columns and rows
         n, m = len(matrix), len(matrix[0])
 
-        row_diff = [0] * n
-        col_diff = [0] * m
+        row_diff = [0] * n    # 2d vector for the sum of 1's minus the sum of 0's in each row
+        col_diff = [0] * m    # 2d vector for the sum of 1's minus the sum of 0's in each column
 
         # Calculate values for vectors
         for i in range(n):
             for j in range(m):
-                if matrix[i][j] == 1:
-                    row_diff[i] += 1
+                if matrix[i][j] == 1:    
+                    row_diff[i] += 1       
                     col_diff[j] += 1
                 else:
                     row_diff[i] -= 1
